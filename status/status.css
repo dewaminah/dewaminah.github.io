@@ -76,3 +76,14 @@ footer span {
     transform: translate(-40%, 50%);
     width: max-content;
 }
+
+@media only screen and (max-width: 768px) {
+    .step > span {
+        font-size: 8px;
+        position: absolute;
+        top: 100%;
+        left: 40%;
+        transform: translate(-40%, 50%);
+        width: max-content;
+    }
+}
