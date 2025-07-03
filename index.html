@@ -4,68 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAKANTAR - Anterin MAkanan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js"></script>
+    <title>makantar - Home Page</title>
     <link rel="stylesheet" href="status/status.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
-        <style>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="../assets/site.webmanifest">
+    <style>
         body {
             font-family: 'Nunito', sans-serif;
         }
     </style>
    <head>
-
-   <body>
-       <nav class="navbar fixed w-full z-50 px-8 py-0 md:px-20 bg-[#FCFBF8] shadow-md">
-       
-        <div class="container mx-auto flex justify-between items-center  ">
+<body>
+  <nav class="navbar fixed w-full z-50 px-8 py-0 md:px-20 bg-[#FCFBF8] shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      
       <!-- Logo -->
-        <div class="flex items-center">
-                <a href="#" class="text-[#6d6d6d] font-bold flex items-center">
-                <img src="src/6.png"  style="width: 180px; height:auto;" />
+      <div class="flex items-center">
+        <a href="#" class="text-[#6d6d6d] font-bold flex items-center">
+          <img src="src/6.png" style="width: 180px; height:auto;" />
         </a>
-         </div> 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="status/index.html" class="text-[#262626] font-bold hover:text-yellow-400 transition">Status</a>
-                    <button class="text-[#262626] font-bold hover:text-yellow-400 transition">
-                        <i class="fas fa-shopping-cart text-xl"></i>
-                        <!-- <span
-                            class="absolute -top-2 -right-2 bg-yellow-500 text-xs text-[#6d6d6d] rounded-full h-5 w-5 flex items-center justify-center">3</span> -->
-                    </button>
-                <div class="relative">    
-            <div>
-<!-- Sign In / Greeting Area -->
-  </div>
-    <div class=" text-black font-semibold">
-   <span id="userGreeting" style="display:none">
-     Hai, <span id="userNameDisplay"></span> 
-  </span>
+      </div>
 
-<!-- Tombol Sign In / Log Out -->
-<a
-  id="signInBtn"
-  href="signin.html"
-  class="bg-[#FEE601] text-[#262626] font-bold py-2 px-6 rounded-full transition hover:bg-yellow-400 cursor-pointer ml-4"
->
-  Sign In
-</a>
-  </div>
-    <!-- Mobile Menu Button -->
-      <div class="md:hidden flex items-center">
-          <button class="text-white text-2xl focus:outline-none" id="mobile-menu-button">
-              <i class="fas fa-bars"></i>
-          </button>
-      <div class="relative ml-4">
-            <button class="text-white">
-              <i class="fas fa-shopping-cart text-xl"></i>
-                 </button>
-            </div>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="status/index.html" class="text-[#262626] font-bold hover:text-yellow-400 transition">
+          Status
+        </a>
+
+        <button class="text-[#262626] font-bold hover:text-yellow-400 transition">
+          <i class="fas fa-shopping-cart text-xl"></i>
+        </button>
+
+        <!-- Sign In / Greeting Area -->
+        <div class="relative text-black font-semibold">
+          <span id="userGreeting" style="display:none">
+            Hai, <span id="userNameDisplay"></span>
+          </span>
+
+          <a
+            id="signInBtn"
+            href="signin.html"
+            class="bg-[#FEE601] text-[#262626] font-bold py-2 px-6 rounded-full transition hover:bg-yellow-400 cursor-pointer ml-4"
+          >
+            Sign In
+          </a>
         </div>
-    </nav> 
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button class="text-black text-2xl focus:outline-none" id="mobile-menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="relative ml-4">
+          <button class="text-black">
+            <i class="fas fa-shopping-cart text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
 
 <!-- Hero Section -->
 <section class="relative w-full h-[900px]">
@@ -111,7 +117,6 @@
             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Udon Tempura</li>
             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Indomie Goreng Spesial</li>
             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Mie Tek-Tek</li>
-
             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Nasi Ayam Sambal Ijo</li>
             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Nasi Telur Dadar Crispy</li>
             <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Nasi Goreng Kambing</li>
@@ -261,8 +266,6 @@
             </div>
         </div>
     </section>
-
-
     <!-- Bagian Menu -->
     <section class="flex flex-col items-center p-8">
       <h2 class="text-black-700 text-3xl font-bold text-center">
@@ -270,7 +273,6 @@
       </h2>
       <div class="grid grid-cols-4 items-center gap-4 p-4 w-9/10">
         <!-- Bagian Card Menu -->
-
             <!-- Card Menu  1. -->
                  <div
                     class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
@@ -287,10 +289,10 @@
                             <div class="mt-4 flex justify-center items-center ">
                             <div class="flex items-center text-yellow-400">
                             </div>
-                            <button
+                            <a href="detail-resto/KELUARGA-Mart.html"
                                 class="bg-[#FEE601] hover:bg-yellow-600  font-bold px-20 py-2 rounded-full transition">
                                 Lihat Detail
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -310,10 +312,10 @@
                         <div class="mt-4 flex justify-center items-center">
                             <div class="flex items-center text-yellow-400">
                             </div>
-                            <button
-                                class="bg-[#FEE601] hover:bg-yellow-600 font-bold px-20 py-2 rounded-full transition">
+                              <a href="detail-resto/Dapur-Kencan.html"
+                                class="bg-[#FEE601] hover:bg-yellow-600  font-bold px-20 py-2 rounded-full transition">
                                 Lihat Detail
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -333,10 +335,10 @@
                         <div class="mt-4 flex justify-center items-center">
                             <div class="flex items-center text-yellow-400">
                             </div>
-                            <button
-                                class="bg-[#FEE601] hover:bg-yellow-600 font-bold px-20 py-2 rounded-full transition">
+                                 <a href="detail-resto/AYON-MALL.html"
+                                class="bg-[#FEE601] hover:bg-yellow-600  font-bold px-20 py-2 rounded-full transition">
                                 Lihat Detail
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -358,10 +360,10 @@
                             <div class="flex items-center text-yellow-400">
 
                             </div>
-                            <button
-                                class="bg-[#FEE601] hover:bg-yellow-600 font-bold px-20 py-2 rounded-full transition">
-                               Lihat Detail
-                            </button>
+                              <a href="detail-resto/Bread-Life.html"
+                                class="bg-[#FEE601] hover:bg-yellow-600  font-bold px-20 py-2 rounded-full transition">
+                                Lihat Detail
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -381,10 +383,10 @@
                         <div class="mt-4 flex justify-center items-center">
                             <div class="flex items-center text-yellow-400">
                             </div>
-                            <button
-                                class="bg-[#FEE601] hover:bg-yellow-600 font-bold px-20 py-2 rounded-full transition">
+                              <a href="detail-resto/AEON-MALL.html"
+                                class="bg-[#FEE601] hover:bg-yellow-600  font-bold px-20 py-2 rounded-full transition">
                                 Lihat Detail
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -403,10 +405,10 @@
                         <div class="mt-4 flex justify-center items-center">
                             <div class="flex items-center text-yellow-400">
                             </div>
-                            <button
-                                class="bg-[#FEE601] hover:bg-yellow-600 font-bold px-20 py-2 rounded-full transition">
+                              <a href="detail-resto/IPAR-LAKILAKI.html"
+                                class="bg-[#FEE601] hover:bg-yellow-600  font-bold px-20 py-2 rounded-full transition">
                                 Lihat Detail
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -427,10 +429,10 @@
                         <div class="mt-4 flex justify-center items-center">
                             <div class="flex items-center text-yellow-400">
                             </div>
-                            <button
-                                class="bg-[#FEE601] hover:bg-yellow-600 font-bold px-20 py-2 rounded-full transition">
+                               <a href="detail-resto/GOP-6-Eatery.html"
+                                class="bg-[#FEE601] hover:bg-yellow-600  font-bold px-20 py-2 rounded-full transition">
                                 Lihat Detail
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -449,16 +451,15 @@
                         <div class="mt-4 flex justify-center items-center">
                             <div class="flex items-center text-yellow-400">
                             </div>
-                                <button
+                                <a href="detail-resto/GOP-9-CANTTEN.html"
                                 class="bg-[#FEE601] hover:bg-yellow-600  font-bold px-20 py-2 rounded-full transition">
                                 Lihat Detail
-                            </button>
+                            </a>
                         </div>
-                    </div>
-                </div>
+                    </div>   
+                   </div>
       <!-- Bagian Button Buy -->
      </div>
-      <!-- Bagian Button Buy -->
     </section>
         <footer class="p-5">
         <div class="grid md:grid-cols-2 md:gap-20">
@@ -468,7 +469,6 @@
                     <p class="px-2 py-4 text-justify">makantar adalah platform web sederhana untuk titip makanan ke temen kantor yang sedang keluar membeli makan siang. Konsepnya fun, santai, dan cocok untuk komunitas kerja yang sibuk tapi tetap ingin makan siang bareng — walau kadang males turun, males nyebrang, atau lagi ngejar deadline.</p>
                 </div>
             </div>
-            
             <div class="grid grid-cols-2 md:grid-cols-1 px-5 py-20 gap-10">
                 <!-- footer nav (home, about, testi, dll) -->
                 <div class="grid md:grid-cols-2 md:gap-0 gap-10">
