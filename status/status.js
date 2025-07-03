@@ -12,7 +12,7 @@ function stepDone1 () {
     step1.classList.remove('active')
     step2.classList.add('active')
 
-    textProgress.textContent = "Ga lama kan? Ini otw kok";
+    textProgress.textContent = "Driver lagi tancap gas, kayak kamu ngejar cinta yang gak pasti.";
     imgIlustration.src = "../assets/anims/chill-guy-walk.gif"
 }
 function stepDone2 () {
@@ -20,7 +20,7 @@ function stepDone2 () {
     step2.classList.remove('active')
     step3.classList.add('active')
     
-    textProgress.textContent = "Ente dimana, ditaro ditempat biasa aja ya??";
+    textProgress.textContent = "Makanan udah nyampe, tinggal buktiin cinta lewat suapan pertama.";
     imgIlustration.src = "../assets/anims/gps.gif"
 }
 function stepDone3 () {
@@ -28,7 +28,7 @@ function stepDone3 () {
     step3.classList.remove('active')
     step4.classList.add('active')
     
-    textProgress.textContent = "Kalo laperr lagi? Taukan harus hubungi siapaa??";
+    textProgress.textContent = "Perut kenyang, hati senang—bisa move on dari mie instan!";
     imgIlustration.src = "../assets/anims/heart.gif"
 }
 function stepDone4 () {
@@ -36,8 +36,8 @@ function stepDone4 () {
     step4.classList.remove('active')
 }
 
-// delay 4 detik per step
-setTimeout(stepDone1, 4000);
-setTimeout(stepDone2, 8000);
-setTimeout(stepDone3, 12000);
-setTimeout(stepDone4, 16000);
+// delay 5 detik per step
+setTimeout(stepDone1, 5000);
+setTimeout(stepDone2, 10000);
+setTimeout(stepDone3, 15000);
+setTimeout(stepDone4, 20000);
