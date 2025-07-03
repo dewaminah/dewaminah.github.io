@@ -248,7 +248,14 @@
 
     <script>
         function clearCart() {
+            // save username login in variable
+            let userName = localStorage.getItem('userName');
+
+            // clear all localstorage
             localStorage.clear();
+
+            // set ulang username login
+            localStorage.setItem("userName", userName)
         }
     </script>
 </body>
