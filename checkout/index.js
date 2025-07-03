@@ -81,9 +81,12 @@ document.getElementById('hargaMakanan').textContent = formatRupiah(totalHarga);
 function updateGedung() {
     let gdanter = document.getElementById('gdanter')
     let diantar = document.querySelector('input[name="bordered-radio"]:checked').value;
-    
+    localStorage.setItem('namaGedung', diantar);
+
     gdanter.innerHTML = `<p class="text-sm text-[#6d6d6d]">Diantar ke</p>
     <p class="font-bold text-lg">${diantar}</p>`
+
+    updateDisplay();
 }
 
 updateGedung();
@@ -119,9 +122,10 @@ function updateCart() {
         totalHarga += cartItem[i].harga * cartItem[i].jumlah;     
     }
     updateTotalHarga();
+    updateDisplay();
+    updateGedung();
 }
 
-updateCart();
 
 function updateTotalHarga() {
     let hargaFinal = 0;
