@@ -1,6 +1,7 @@
 // ==================== KERANJANG ====================
 
-const cart = []; // Menyimpan semua item yang ditambahkan ke keranjang, dalam bentuk objek: { id, harga, jumlah }
+ // Menyimpan semua item yang ditambahkan ke keranjang, dalam bentuk objek: { id, harga, jumlah }
+const cart = JSON.parse(localStorage.getItem('cart_items')) || [];
 
 function toggleMenu(id) {
     // Menampilkan atau menyembunyikan elemen dengan ID tertentu (biasanya menu dropdown)
@@ -49,9 +50,10 @@ function updateDisplay() {
     // Simpan total item dan total harga ke localStorage
     localStorage.setItem('checkout_totalItem', totalItem);
     localStorage.setItem('checkout_totalHarga', totalHarga);
+    localStorage.setItem('cart_items', JSON.stringify(cart));
 }
 
-function addItem(id, harga) {
+function addItem(id, harga, nama, imageUrl) {
     // Menambahkan item ke dalam keranjang berdasarkan ID dan harga
     const found = cart.find(item => item.id === id); // Cek apakah item sudah ada di keranjang
 
@@ -60,7 +62,13 @@ function addItem(id, harga) {
         found.jumlah++;
     } else {
         // Jika belum ada, masukkan sebagai item baru
-        cart.push({ id, harga, jumlah: 1 });
+        cart.push({
+            id,
+            harga,
+            nama,
+            jumlah: 1,
+            imageUrl
+        });
     }
 
     // Perbarui tampilan keranjang setelah penambahan
