@@ -2,592 +2,578 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAKANTAR - Anterin MAkanan</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-   <body>
-       <nav class="navbar fixed w-full z-50 px-8 py-0 md:px-20 bg-[#FCFBF8] shadow-md">
-       
-        <div class="container mx-auto flex justify-between items-center  ">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAKANTAR - Anterin MAkanan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
+<body>
+  <nav class="navbar fixed w-full z-50 px-8 py-0 md:px-20 bg-[#FCFBF8] shadow-md">
+
+    <div class="container mx-auto flex justify-between items-center  ">
       <!-- Logo -->
-        <div class="flex items-center">
-                <a href="#" class="text-[#6d6d6d] font-bold flex items-center">
-                <img src="src/6.png"  style="width: 180px; height:auto;" />
+      <div class="flex items-center">
+        <a href="#" class="text-[#6d6d6d] font-bold flex items-center">
+          <img src="src/6.png" style="width: 180px; height:auto;" />
         </a>
-         </div> 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#Status" class="text-[#262626] font-bold hover:text-yellow-400 transition">Status</a>
-                    <button class="text-[#262626] font-bold hover:text-yellow-400 transition">
-                        <i class="fas fa-shopping-cart text-xl"></i>
-                        <!-- <span
-                            class="absolute -top-2 -right-2 bg-yellow-500 text-xs text-[#6d6d6d] rounded-full h-5 w-5 flex items-center justify-center">3</span> -->
-                    </button>
-                <div class="relative">    
-            <div>
-<!-- Sign In / Greeting Area -->
-  </div>
-    <div class=" text-black font-semibold">
-   <span id="userGreeting" style="display:none">
-     Hai, <span id="userNameDisplay"></span> 
-  </span>
-
-<!-- Tombol Sign In / Log Out -->
-<a
-  id="signInBtn"
-  href="signin.html"
-  class="bg-[#FEE601] text-[#262626] font-bold py-2 px-6 rounded-full transition hover:bg-yellow-400 cursor-pointer ml-4"
->
-  Sign In
-</a>
-  </div>
-    <!-- Mobile Menu Button -->
-      <div class="md:hidden flex items-center">
-          <button class="text-white text-2xl focus:outline-none" id="mobile-menu-button">
-              <i class="fas fa-bars"></i>
-          </button>
-      <div class="relative ml-4">
-            <button class="text-white">
-              <i class="fas fa-shopping-cart text-xl"></i>
-                 </button>
-            </div>
-        </div>
-    </nav> 
-
-<!-- Hero Section -->
-<section class="relative w-full h-[900px]">
-  <!-- Gambar Background -->
-  <img src="src/MAGER TAPI LAPAR MAKANTAR AJA!.png" alt="Gambar Mager tapi Laper"
-       class="w-full h-full object-cover" />
-
-  <!-- Konten Tengah (Logo, Judul, Subjudul) -->
-  <div class="absolute inset-0 z-10 flex flex-col items-center justify-center text-black text-center">
-    <!-- Ganti src logo sesuai kebutuhan -->
-    <img src="src/logo.png" alt="Logo" class="w-60 h-60" />
-  <h1 class="text-6xl md:text-8xl font-bold mb-2">Laper Tapi Mager???</h1>
-  <p class="text-lg md:text-4xl font-semibold mt-8">Solusi Easy Buat yang Lazy Abis Elsiiii</p>
-  </div>
-  <!-- Scroll Indicator -->
-  <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-    <a href="#featured" class="text-white text-xl sm:text-2xl">
-      <i class="fas fa-chevron-down"></i>
-    </a>
-  </div>
-</section>
-
-<!-- Overlay pencarian di bawah gambar, agak ke atas dari bawah -->
-<div class="relative left-1/2 bottom-40 transform -translate-x-1/2 w-full px-5 z-30">
-  <div class="bg-white backdrop-blur-md rounded-lg p-6 flex space-x-2 shadow-lg max-w-4xl mx-auto w-full">
-    <input
-      type="text"
-      id="search-input"
-      placeholder="Mau Makan Apa Hari Ini?"
-      class="flex-grow border border-gray-300 px-4 py-2 text-base rounded-l-md focus:outline-none"
-    />
-    <button
-      id="search-button"
-      class="bg-yellow-600 text-white px-6 py-2 text-base rounded-r-md hover:bg-blue-700 transition"
-    >
-      Cari
-    </button>
-  </div>
-</div>
-</section>
-<!-- Bagian Promo --> <section class="flex flex-col items-center p-8">
-  <h2 class="text-gray-700 text-3xl font-bold text-center">
-      Promo Minggu Ini
-  </h2>
-</section>
-<section class="p-8 space-y-8 max-w-6xl mx-auto">
-
-<!-- Promo 1 (Gambar Kiri) -->
-<div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 flex max-w-8xl mx-auto">
-  <!-- Image -->
-  <div class="relative w-1/2">
-    <img
-      src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/03/13/Donat-kentang-tanpa-cetakan-nggak-bakalan-kempes-2684357255.jpg"
-      alt="Donat"
-      class="w-full h-full object-cover"
-    />
-    <div
-      class="absolute top-4 right-4 bg-red-500 text-white text-sm font-bold px-3 py-1 rounded-full"
-    >
-      20% off
-    </div>
-  </div>
-
-  <!-- Details -->
-  <div class="w-1/2 p-6 flex flex-col justify-between">
-    <div>
-      <div class="flex justify-between items-start">
-        <h3 class="text-2xl font-bold text-gray-800 text-wrap"> 2 Donat Famima</h3>
-        <span class="text-yellow-500 text-2xl font-bold">Rp 350.000</span>
       </div>
-      <p class="text-gray-600 mt-2 text-lg leading-relaxed">
-        Donat tidak hambar bertaburkan gula yang menyatu nikmat di lidah. Khusus hari ini beli 2 hanya Rp350.000 
-        Gratis Ongkir 
-      </p>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#Status" class="text-[#262626] font-bold hover:text-yellow-400 transition">Status</a>
+        <button class="text-[#262626] font-bold hover:text-yellow-400 transition">
+          <i class="fas fa-shopping-cart text-xl"></i>
+          <!-- <span
+                            class="absolute -top-2 -right-2 bg-yellow-500 text-xs text-[#6d6d6d] rounded-full h-5 w-5 flex items-center justify-center">3</span> -->
+        </button>
+        <div class="relative">
+          <div>
+            <!-- Sign In / Greeting Area -->
+          </div>
+          <div class=" text-black font-semibold">
+            <span id="userGreeting" style="display:none">
+              Hai, <span id="userNameDisplay"></span>
+            </span>
+
+            <!-- Tombol Sign In / Log Out -->
+            <a id="signInBtn" href="signin.html"
+              class="bg-[#FEE601] text-[#262626] font-bold py-2 px-6 rounded-full transition hover:bg-yellow-400 cursor-pointer ml-4">
+              Sign In
+            </a>
+          </div>
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button class="text-white text-2xl focus:outline-none" id="mobile-menu-button">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="relative ml-4">
+              <button class="text-white">
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </button>
+            </div>
+          </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-[900px]">
+    <!-- Gambar Background -->
+    <img src="src/MAGER TAPI LAPAR MAKANTAR AJA!.png" alt="Gambar Mager tapi Laper"
+      class="w-full h-full object-cover" />
+
+    <!-- Konten Tengah (Logo, Judul, Subjudul) -->
+    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center text-black text-center">
+      <!-- Ganti src logo sesuai kebutuhan -->
+      <img src="src/logo.png" alt="Logo" class="w-60 h-60" />
+      <h1 class="text-6xl md:text-8xl font-bold mb-2">Laper Tapi Mager???</h1>
+      <p class="text-lg md:text-4xl font-semibold mt-8">Solusi Easy Buat yang Lazy Abis Elsiiii</p>
     </div>
-      <button
-        class="w-full bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] px-6 py-3 text-lg font-semibold rounded-full transition"
-      >
-        Beli sekarang
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <a href="#featured" class="text-white text-xl sm:text-2xl">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Overlay pencarian di bawah gambar, agak ke atas dari bawah -->
+  <div class="relative left-1/2 bottom-40 transform -translate-x-1/2 w-full px-5 z-30">
+    <div class="bg-white backdrop-blur-md rounded-lg p-6 flex space-x-2 shadow-lg max-w-4xl mx-auto w-full">
+      <input type="text" id="search-input" placeholder="Mau Makan Apa Hari Ini?"
+        class="flex-grow border border-gray-300 px-4 py-2 text-base rounded-l-md focus:outline-none" />
+      <button id="search-button"
+        class="bg-yellow-600 text-white px-6 py-2 text-base rounded-r-md hover:bg-blue-700 transition">
+        Cari
       </button>
     </div>
   </div>
-</div>
+  </section>
+  <!-- Bagian Promo -->
+  <section class="flex flex-col items-center p-8">
+    <h2 class="text-gray-700 text-3xl font-bold text-center">
+      Promo Minggu Ini
+    </h2>
+  </section>
+  <section class="p-8 space-y-8 max-w-6xl mx-auto">
 
-</div>
-  <!-- Promo 2 (Gambar Kanan) -->
-  <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 flex max-w-8xl mx-auto">
-    <!-- Details -->
-    <div class="w-1/2 p-6 flex flex-col justify-between">
-      <div>
-        <div class="flex justify-between items-start">
-          <h3 class="text-2xl font-bold text-gray-800">Kopi Anget</h3>
-          <span class="text-yellow-500 text-xl font-bold">Rp3000.000</span>
+    <!-- Promo 1 (Gambar Kiri) -->
+    <div
+      class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 flex max-w-8xl mx-auto">
+      <!-- Image -->
+      <div class="relative w-1/2">
+        <img
+          src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/03/13/Donat-kentang-tanpa-cetakan-nggak-bakalan-kempes-2684357255.jpg"
+          alt="Donat" class="w-full h-full object-cover" />
+        <div class="absolute top-4 right-4 bg-red-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+          20% off
         </div>
-        <p class="text-gray-600 mt-3 text-lg">
-          Bubuk kopi bersatu dengan air hangat diberi butiran manis diaduk dengan cinta beli 5 gratis 2
-        </p>
       </div>
 
-      <div class="mt-6 flex justify-between items-center">
-        <div class="flex items-center text-yellow-400 text-lg">
+      <!-- Details -->
+      <div class="w-1/2 p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start">
+            <h3 class="text-2xl font-bold text-gray-800 text-wrap"> 2 Donat Famima</h3>
+            <span class="text-yellow-500 text-2xl font-bold">Rp 350.000</span>
+          </div>
+          <p class="text-gray-600 mt-2 text-lg leading-relaxed">
+            Donat tidak hambar bertaburkan gula yang menyatu nikmat di lidah. Khusus hari ini beli 2 hanya Rp350.000
+            Gratis Ongkir
+          </p>
         </div>
         <button
-           class="w-full bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] px-6 py-3 text-lg font-semibold rounded-full transition"
-        >
+          class="w-full bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] px-6 py-3 text-lg font-semibold rounded-full transition">
           Beli sekarang
         </button>
       </div>
     </div>
-
-    <!-- Image -->
-    <div class="relative w-1/2">
-      <img
-        src="https://kopinian.com/wp-content/uploads/2023/12/apa-itu-cappuccino.webp"
-        alt="Burger"
-        class="w-full h-full object-cover"
-      />
-      <div
-        class="absolute top-4 left-4 bg-red-500 text-white text-sm font-bold px-3 py-1 rounded-full"
-      >
-        40% Off
-      </div>
-    </div>
-  </div>
-
-  <!-- Promo 3 (Gambar Kiri) -->
-  <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 flex max-w-8xl mx-auto">
-    <!-- Image -->
-    <div class="relative w-1/2">
-      <img
-        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80"
-        alt="Burger"
-        class="w-full h-full object-cover"
-      />
-      <div
-        class="absolute top-4 right-4 bg-red-500 text-white text-sm font-bold px-3 py-1 rounded-full"
-      >
-       80% Off
-      </div>
     </div>
 
-    <!-- Details -->
-    <div class="w-1/2 p-6 flex flex-col justify-between">
-      <div>
-        <div class="flex justify-between items-start">
-          <h3 class="text-2xl font-bold text-gray-800">Krabby Burger</h3>
-          <span class="text-yellow-500 text-xl font-bold">Rp42.000.000</span>
+    </div>
+    <!-- Promo 2 (Gambar Kanan) -->
+    <div
+      class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 flex max-w-8xl mx-auto">
+      <!-- Details -->
+      <div class="w-1/2 p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start">
+            <h3 class="text-2xl font-bold text-gray-800">Kopi Anget</h3>
+            <span class="text-yellow-500 text-xl font-bold">Rp3000.000</span>
+          </div>
+          <p class="text-gray-600 mt-3 text-lg">
+            Bubuk kopi bersatu dengan air hangat diberi butiran manis diaduk dengan cinta beli 5 gratis 2
+          </p>
         </div>
-        <p class="text-gray-600 mt-3 text-lg">
-          Tumpukan kenikmatan yang bersatu. roti empuk dengan ratusan biji wijen yang berkolaborasi dengan sayuran sehat tomat,saus yang menambah kenikmatan dan daging sapi yang yummyy..
-          Beli lima gratis tiga
-        </p>
+
+        <div class="mt-6 flex justify-between items-center">
+          <div class="flex items-center text-yellow-400 text-lg">
+          </div>
+          <button
+            class="w-full bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] px-6 py-3 text-lg font-semibold rounded-full transition">
+            Beli sekarang
+          </button>
+        </div>
       </div>
+
+      <!-- Image -->
+      <div class="relative w-1/2">
+        <img src="https://kopinian.com/wp-content/uploads/2023/12/apa-itu-cappuccino.webp" alt="Burger"
+          class="w-full h-full object-cover" />
+        <div class="absolute top-4 left-4 bg-red-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+          40% Off
+        </div>
+      </div>
+    </div>
+
+    <!-- Promo 3 (Gambar Kiri) -->
+    <div
+      class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 flex max-w-8xl mx-auto">
+      <!-- Image -->
+      <div class="relative w-1/2">
+        <img
+          src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80"
+          alt="Burger" class="w-full h-full object-cover" />
+        <div class="absolute top-4 right-4 bg-red-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+          80% Off
+        </div>
+      </div>
+
+      <!-- Details -->
+      <div class="w-1/2 p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start">
+            <h3 class="text-2xl font-bold text-gray-800">Krabby Burger</h3>
+            <span class="text-yellow-500 text-xl font-bold">Rp42.000.000</span>
+          </div>
+          <p class="text-gray-600 mt-3 text-lg">
+            Tumpukan kenikmatan yang bersatu. roti empuk dengan ratusan biji wijen yang berkolaborasi dengan sayuran
+            sehat tomat,saus yang menambah kenikmatan dan daging sapi yang yummyy..
+            Beli lima gratis tiga
+          </p>
+        </div>
         <button
-          class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-semibold px-6 py-2 text-lg rounded-full transition"
-        >
+          class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-semibold px-6 py-2 text-lg rounded-full transition">
           Beli sekarang
         </button>
       </div>
     </div>
+    </div>
+  </section>
+  <!-- Bagian Promo -->
+  <div class="flex flex-col items-center justify-center ml-4"></div>
+  <div class="text-center mt-12">
+
   </div>
-</section>
-    <!-- Bagian Promo -->
- <div class="flex flex-col items-center justify-center ml-4"></div>
-            <div class="text-center mt-12">
-               
-            </div>
+  </div>
+  </section>
+
+
+  <!-- Bagian Menu -->
+  <section class="flex flex-col items-center p-8">
+    <h2 class="text-gray-700 text-3xl font-bold text-center">
+      Restoran di Sekitarmu
+    </h2>
+    <div class="grid grid-cols-4 items-center gap-4 p-4 w-9/10">
+      <!-- Bagian Card Menu -->
+
+      <!-- Card Menu  1. -->
+      <div
+        class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+        <div class="relative">
+          <img src="https://www.pakubuwono6.com/wp-content/uploads/2022/08/DSC_3672-Copy.jpg" alt="Sushi"
+            class="w-full h-64 object-cover">
         </div>
-    </section>
-
-
-    <!-- Bagian Menu -->
-    <section class="flex flex-col items-center p-8">
-      <h2 class="text-gray-700 text-3xl font-bold text-center">
-        Restoran di Sekitarmu
-      </h2>
-      <div class="grid grid-cols-4 items-center gap-4 p-4 w-9/10">
-        <!-- Bagian Card Menu -->
-
-            <!-- Card Menu  1. -->
-                 <div
-                    class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="relative">
-                        <img src="https://www.pakubuwono6.com/wp-content/uploads/2022/08/DSC_3672-Copy.jpg"
-                            alt="Sushi" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-xl font-bold text-[#6d6d6d]">KELUARGA Mart</h3>
-                            <span class="text-[#6d6d6d] font-bold">2.01 km</span>
-                        </div>
-                        <!-- <p class="text-gray-600 mt-2">Fresh vegetables with avocado and special dressing.</p> -->
-                            <div class="mt-4 flex justify-center items-center ">
-                            <div class="flex items-center text-yellow-400">
-                            </div>
-                            <button
-                                class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
-                                Lihat Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                 <!-- Card Menu  2. -->
-                 <div
-                    class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="relative">
-                        <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1733967095/attached_image/7-makanan-korea-yang-menyehatkan-cocok-di-lidah-lokal.jpg"
-                            alt="Sushi" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-xl font-bold text-[#6d6d6d]">Dapur Kencan</h3>
-                            <span class="text-[#6d6d6d] font-bold">2.01 km</span>
-                        </div>
-                        <!-- <p class="text-gray-600 mt-2">Fresh vegetables with avocado and special dressing.</p> -->
-                        <div class="mt-4 flex justify-center items-center">
-                            <div class="flex items-center text-yellow-400">
-                            </div>
-                            <button
-                                class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
-                                Lihat Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                   <!-- Card Menu  3. -->
-                 <div
-                    class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="relative">
-                        <img src="https://blog.bankmega.com/wp-content/uploads/2022/11/Makanan-Khas-Tradisional.jpg"
-                            alt="Sushi" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-xl font-bold text-[#6d6d6d]">AYON MALL</h3>
-                            <span class="text-[#6d6d6d] font-bold">1.01 km</span>
-                        </div>
-                        <!-- <p class="text-gray-600 mt-2">Fresh vegetables with avocado and special dressing.</p> -->
-                        <div class="mt-4 flex justify-center items-center">
-                            <div class="flex items-center text-yellow-400">
-                            </div>
-                            <button
-                                class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
-                                Lihat Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                    <!-- Card Menu  4. -->
-                  <div
-                    class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="relative">
-                        <img src="https://static.wixstatic.com/media/ecef2e_92319034849c4dbb83c2b88e37722c1a~mv2.jpeg/v1/fill/w_925,h_616,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ecef2e_92319034849c4dbb83c2b88e37722c1a~mv2.jpeg"
-                            alt="Sushi" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-xl font-bold text-[#6d6d6d]">Bread Life</h3>
-                            <span class="text-[#6d6d6d] font-bold">2.01 km</span>
-                        </div>
-                        <!-- <p class="text-gray-600 mt-2">Fresh vegetables with avocado and special dressing.</p> -->
-                        <div class="mt-4 flex justify-center items-center">
-                            <div class="flex items-center text-yellow-400">
-
-                            </div>
-                            <button
-                                class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
-                               Lihat Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                   <!-- Card Menu  5. -->
-                 <div
-                    class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="relative">
-                        <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/250/2024/12/13/Mall-AEON-BSD-Serpong-Dok-The-Avenue-Serpong-3931103929.jpg"
-                            alt="Aeon" class="w-contain h-64 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-xl font-bold text-[#6d6d6d]">AEON MALL</h3>
-                            <span class="text-[#6d6d6d] font-bold">2.01 km</span>
-                        </div>
-                        <!-- <p class="text-gray-600 mt-2">Fresh vegetables with avocado and special dressing.</p> -->
-                        <div class="mt-4 flex justify-center items-center">
-                            <div class="flex items-center text-yellow-400">
-                            </div>
-                            <button
-                                class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
-                                Lihat Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                 <div
-                    class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="relative">
-                        <img src="https://nibble-images.b-cdn.net/nibble/original_images/lawson_oden_2_f84353eec6_RYCUIwHp7.jfif"
-                            alt="Sushi" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-xl font-bold text-[#6d6d6d]">IPAR LAKILAKI</h3>
-                            <span class="text-[#6d6d6d] font-bold">2.01 km</span>
-                        </div>
-                        
-                        <div class="mt-4 flex justify-center items-center">
-                            <div class="flex items-center text-yellow-400">
-                            </div>
-                            <button
-                                class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
-                                Lihat Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-               <!-- Card Menu  5 -->
-                 <div
-                    class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="relative">
-                        <img src="https://asset.kompas.com/crops/xrZde77e8faUi3t4pr0NQDFJMlg=/144x67:944x600/1200x800/data/photo/2023/01/22/63ccb98bcb0c3.jpg"
-                            alt="GOP6" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-xl font-bold text-[#6d6d6d]">GOP 6 Eatery</h3>
-                            <span class="text-[#6d6d6d] font-bold">1.01 km</span>
-                        </div>
-                        <!-- <p class="text-gray-600 mt-2">Fresh vegetables with avocado and special dressing.</p> -->
-                        <div class="mt-4 flex justify-center items-center">
-                            <div class="flex items-center text-yellow-400">
-                            </div>
-                            <button
-                                class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
-                                Lihat Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                 <!-- Card Menu  8. -->
-                 <div
-                    class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="relative">
-                        <img src="https://radarkuningan.disway.id/upload/4dfd96e36707279c2b344df0dc3935d4.jpg"
-                            alt="Sushi" class="w-full h-64 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-xl font-bold text-[#6d6d6d]">GOP 9 CANTTEN</h3>
-                            <span class="text-[#6d6d6d] font-bold">1.01 km</span>
-                        </div>
-                        <div class="mt-4 flex justify-center items-center">
-                            <div class="flex items-center text-yellow-400">
-                            </div>
-                                  <button
-                                class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
-                                Lihat Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
-      <!-- Bagian Button Buy -->
-     </div>
-      <!-- Bagian Button Buy -->
-    </section>
-    <!-- Footer -->
-    <footer id="contact" style="background-color: #262626" class="text-white py-9 md:px-10">
-        <div class="container mx-auto px-3">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Column 1 -->
-                <div>
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <i class="fas fa-utensils text-yellow-400 mr-2"></i>
-                        <span>MAKANTAR</span>
-                    </h3>
-                    <p class="text-gray-400 mb-4">Makantar anda makan kami antar wuzz</p>
-                        Jasa Antar Makanan.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Column 2 -->
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Home</a></li>
-                        <li><a href="#featured" class="text-gray-400 hover:text-yellow-400 transition">Menu</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Blog</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 3 -->
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Support</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Contact Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">FAQs</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Terms of Service</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Refund Policy</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 4 -->
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-yellow-400 mt-1 mr-2"></i>
-                            <span>Hactiv8, BSD</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone-alt text-yellow-400 mr-2"></i>
-                            <span>+01 23456789</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope text-yellow-400 mr-2"></i>
-                            <span>info@Makantar.com</span>
-                        </li>
-                    </ul>
-                </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-bold text-[#6d6d6d]">KELUARGA Mart</h3>
+            <span class="text-[#6d6d6d] font-bold">2.01 km</span>
+          </div>
+          <!-- <p class="text-gray-600 mt-2">Fresh vegetables with avocado and special dressing.</p> -->
+          <div class="mt-4 flex justify-center items-center ">
+            <div class="flex items-center text-yellow-400">
             </div>
-
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Code With Vinz. All rights reserved.</p>
-            </div>
+            <a href="/makantar/detail-resto/KELUARGA-Mart.html"
+              class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
+              Lihat Detail
+            </a>
+          </div>
         </div>
-    </footer>
-<script>
-  function animateOnScroll() {
-    const elements = document.querySelectorAll('.animate-fade-in, .animate-fade-in-delay, .animate-fade-in-delay-2');
-    elements.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        el.classList.add('opacity-100', 'translate-y-0');
-        el.classList.remove('opacity-0', 'translate-y-10');
-      }
-    });
-  }
+      </div>
+      <!-- Card Menu  2. -->
+      <div
+        class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+        <div class="relative">
+          <img
+            src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1733967095/attached_image/7-makanan-korea-yang-menyehatkan-cocok-di-lidah-lokal.jpg"
+            alt="Sushi" class="w-full h-64 object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-bold text-[#6d6d6d]">Dapur Kencan</h3>
+            <span class="text-[#6d6d6d] font-bold">2.01 km</span>
+          </div>
+          <!-- <p class="text-gray-600 mt-2">Fresh vegetables with avocado and special dressing.</p> -->
+          <div class="mt-4 flex justify-center items-center">
+            <div class="flex items-center text-yellow-400">
+            </div>
+            <a href="/makantar/detail-resto/Dapur-Kencan.html"
+              class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
+              Lihat Detail
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Card Menu  3. -->
+      <div
+        class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+        <div class="relative">
+          <img src="https://blog.bankmega.com/wp-content/uploads/2022/11/Makanan-Khas-Tradisional.jpg" alt="Sushi"
+            class="w-full h-64 object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-bold text-[#6d6d6d]">AYON MALL</h3>
+            <span class="text-[#6d6d6d] font-bold">1.01 km</span>
+          </div>
+          <!-- <p class="text-gray-600 mt-2">Fresh vegetables with avocado and special dressing.</p> -->
+          <div class="mt-4 flex justify-center items-center">
+            <div class="flex items-center text-yellow-400">
+            </div>
+            <button
+              class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+      </div>
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const signInBtn = document.getElementById("signInBtn");
-    const signinForm = document.getElementById("signin-form");
-    const submitSignin = document.getElementById("submitSignin");
-    const nameInput = document.getElementById("nameInput");
-    const userGreeting = document.getElementById("userGreeting");
-    const userNameDisplay = document.getElementById("userNameDisplay");
+      <!-- Card Menu  4. -->
+      <div
+        class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+        <div class="relative">
+          <img
+            src="https://static.wixstatic.com/media/ecef2e_92319034849c4dbb83c2b88e37722c1a~mv2.jpeg/v1/fill/w_925,h_616,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ecef2e_92319034849c4dbb83c2b88e37722c1a~mv2.jpeg"
+            alt="Sushi" class="w-full h-64 object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-bold text-[#6d6d6d]">Bread Life</h3>
+            <span class="text-[#6d6d6d] font-bold">2.01 km</span>
+          </div>
+          <!-- <p class="text-gray-600 mt-2">Fresh vegetables with avocado and special dressing.</p> -->
+          <div class="mt-4 flex justify-center items-center">
+            <div class="flex items-center text-yellow-400">
 
-    function updateUI() {
-      const userName = localStorage.getItem("userName");
-      if (userName) {
-        signInBtn.textContent = "Log Out";
-        userGreeting.style.display = "inline-block";
-        userNameDisplay.textContent = userName;
-        signinForm.style.display = "none";
-      } else {
-        signInBtn.textContent = "Sign In";
-        userGreeting.style.display = "none";
-        signinForm.style.display = "none";
-      }
-    }
+            </div>
+            <button
+              class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Card Menu  5. -->
+      <div
+        class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+        <div class="relative">
+          <img
+            src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/250/2024/12/13/Mall-AEON-BSD-Serpong-Dok-The-Avenue-Serpong-3931103929.jpg"
+            alt="Aeon" class="w-contain h-64 object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-bold text-[#6d6d6d]">AEON MALL</h3>
+            <span class="text-[#6d6d6d] font-bold">2.01 km</span>
+          </div>
+          <!-- <p class="text-gray-600 mt-2">Fresh vegetables with avocado and special dressing.</p> -->
+          <div class="mt-4 flex justify-center items-center">
+            <div class="flex items-center text-yellow-400">
+            </div>
+            <button
+              class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+        <div class="relative">
+          <img src="https://nibble-images.b-cdn.net/nibble/original_images/lawson_oden_2_f84353eec6_RYCUIwHp7.jfif"
+            alt="Sushi" class="w-full h-64 object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-bold text-[#6d6d6d]">IPAR LAKILAKI</h3>
+            <span class="text-[#6d6d6d] font-bold">2.01 km</span>
+          </div>
 
-if (signInBtn) {
-signInBtn.addEventListener("click", (e) => {
-  const userName = localStorage.getItem("userName");
-  if (userName) {
-    e.preventDefault(); 
-    localStorage.removeItem("userName");
-    updateUI();
-  }
-});
-}
-    if (submitSignin) {
-      submitSignin.addEventListener("click", () => {
-        const name = nameInput.value.trim();
-        if (name) {
-          localStorage.setItem("userName", name);
-          nameInput.value = "";
-          updateUI();
-        } else {
-          alert("Silakan masukkan nama.");
+          <div class="mt-4 flex justify-center items-center">
+            <div class="flex items-center text-yellow-400">
+            </div>
+            <button
+              class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Menu  5 -->
+      <div
+        class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+        <div class="relative">
+          <img
+            src="https://asset.kompas.com/crops/xrZde77e8faUi3t4pr0NQDFJMlg=/144x67:944x600/1200x800/data/photo/2023/01/22/63ccb98bcb0c3.jpg"
+            alt="GOP6" class="w-full h-64 object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-bold text-[#6d6d6d]">GOP 6 Eatery</h3>
+            <span class="text-[#6d6d6d] font-bold">1.01 km</span>
+          </div>
+          <!-- <p class="text-gray-600 mt-2">Fresh vegetables with avocado and special dressing.</p> -->
+          <div class="mt-4 flex justify-center items-center">
+            <div class="flex items-center text-yellow-400">
+            </div>
+            <button
+              class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Card Menu  8. -->
+      <div
+        class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+        <div class="relative">
+          <img src="https://radarkuningan.disway.id/upload/4dfd96e36707279c2b344df0dc3935d4.jpg" alt="Sushi"
+            class="w-full h-64 object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-bold text-[#6d6d6d]">GOP 9 CANTTEN</h3>
+            <span class="text-[#6d6d6d] font-bold">1.01 km</span>
+          </div>
+          <div class="mt-4 flex justify-center items-center">
+            <div class="flex items-center text-yellow-400">
+            </div>
+            <button
+              class="bg-[#FEE601] hover:bg-yellow-600 text-[#6d6d6d] font-bold px-20 py-2 rounded-full transition">
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Bagian Button Buy -->
+    </div>
+    <!-- Bagian Button Buy -->
+  </section>
+  <!-- Footer -->
+  <footer id="contact" style="background-color: #262626" class="text-white py-9 md:px-10">
+    <div class="container mx-auto px-3">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Column 1 -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-utensils text-yellow-400 mr-2"></i>
+            <span>MAKANTAR</span>
+          </h3>
+          <p class="text-gray-400 mb-4">Makantar anda makan kami antar wuzz</p>
+          Jasa Antar Makanan.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Home</a></li>
+            <li><a href="#featured" class="text-gray-400 hover:text-yellow-400 transition">Menu</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Support</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Contact Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">FAQs</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Terms of Service</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition">Refund Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-yellow-400 mt-1 mr-2"></i>
+              <span>Hactiv8, BSD</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone-alt text-yellow-400 mr-2"></i>
+              <span>+01 23456789</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope text-yellow-400 mr-2"></i>
+              <span>info@Makantar.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Code With Vinz. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.animate-fade-in, .animate-fade-in-delay, .animate-fade-in-delay-2');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('opacity-100', 'translate-y-0');
+          el.classList.remove('opacity-0', 'translate-y-10');
         }
       });
     }
 
-    updateUI(); 
+    document.addEventListener("DOMContentLoaded", () => {
+      const signInBtn = document.getElementById("signInBtn");
+      const signinForm = document.getElementById("signin-form");
+      const submitSignin = document.getElementById("submitSignin");
+      const nameInput = document.getElementById("nameInput");
+      const userGreeting = document.getElementById("userGreeting");
+      const userNameDisplay = document.getElementById("userNameDisplay");
 
-    // ========== Animasi Scroll ==========
-    const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-fade-in-delay, .animate-fade-in-delay-2');
-    animatedElements.forEach(el => {
-      el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-500');
-    });
-    document.querySelector('.animate-fade-in-delay')?.classList.add('delay-200');
-    document.querySelector('.animate-fade-in-delay-2')?.classList.add('delay-300');
-    animateOnScroll();
-    window.addEventListener('scroll', animateOnScroll);
-    // ========== Efek Navbar saat scroll ==========
-    window.addEventListener('scroll', function () {
-      const navbar = document.querySelector('.navbar');
-      if (navbar) {
-        navbar.classList.toggle('scrolled', window.scrollY > 50);
+      function updateUI() {
+        const userName = localStorage.getItem("userName");
+        if (userName) {
+          signInBtn.textContent = "Log Out";
+          userGreeting.style.display = "inline-block";
+          userNameDisplay.textContent = userName;
+          signinForm.style.display = "none";
+        } else {
+          signInBtn.textContent = "Sign In";
+          userGreeting.style.display = "none";
+          signinForm.style.display = "none";
+        }
+      }
+
+      if (signInBtn) {
+        signInBtn.addEventListener("click", (e) => {
+          const userName = localStorage.getItem("userName");
+          if (userName) {
+            e.preventDefault();
+            localStorage.removeItem("userName");
+            updateUI();
+          }
+        });
+      }
+      if (submitSignin) {
+        submitSignin.addEventListener("click", () => {
+          const name = nameInput.value.trim();
+          if (name) {
+            localStorage.setItem("userName", name);
+            nameInput.value = "";
+            updateUI();
+          } else {
+            alert("Silakan masukkan nama.");
+          }
+        });
+      }
+
+      updateUI();
+
+      // ========== Animasi Scroll ==========
+      const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-fade-in-delay, .animate-fade-in-delay-2');
+      animatedElements.forEach(el => {
+        el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-500');
+      });
+      document.querySelector('.animate-fade-in-delay')?.classList.add('delay-200');
+      document.querySelector('.animate-fade-in-delay-2')?.classList.add('delay-300');
+      animateOnScroll();
+      window.addEventListener('scroll', animateOnScroll);
+      // ========== Efek Navbar saat scroll ==========
+      window.addEventListener('scroll', function () {
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+          navbar.classList.toggle('scrolled', window.scrollY > 50);
+        }
+      });
+      // ========== Toggle Menu Mobile ==========
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('open');
+          mobileMenuButton.innerHTML = mobileMenu.classList.contains('open')
+            ? '<i class="fas fa-times"></i>'
+            : '<i class="fas fa-bars"></i>';
+        });
       }
     });
-    // ========== Toggle Menu Mobile ==========
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenuButton && mobileMenu) {
-      mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('open');
-        mobileMenuButton.innerHTML = mobileMenu.classList.contains('open')
-          ? '<i class="fas fa-times"></i>'
-          : '<i class="fas fa-bars"></i>';
-      });
-    }
-  });
-</script>
+  </script>
 </body>
+
 </html>
