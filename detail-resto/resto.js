@@ -73,6 +73,7 @@ function addItem(id, harga, nama, imageUrl) {
 
     // Perbarui tampilan keranjang setelah penambahan
     updateDisplay();
+    updateTotalHarga();
 }
 
 function removeItem(id) {
