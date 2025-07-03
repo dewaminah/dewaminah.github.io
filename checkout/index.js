@@ -88,5 +88,58 @@ function updateGedung() {
 
 updateGedung();
 
+function updateCart() {
+    let cartItem = JSON.parse(localStorage.getItem('cart_items'));
+    let itemCard = document.getElementById('itemCard');
+    let totalHarga = 0;
+    
+    
+    for (let i = 0; i < cartItem.length; i++) {
+        itemCard.innerHTML += `
+        <div class="flex gap-4 items-start mb-8">
+        <img src="${ cartItem[i].imageUrl }"
+        class="w-48 h-48 rounded-md object-cover shadow" alt="...">
+        <div class="flex justify-between items-center flex-1">
+        <div>
+        <h3 class="font-[Nunito Sans] text-2xl font-bold mb-6">${ cartItem[i].nama }</h4>
+        <h5 class="font-[Nunito Sans] text-xl font-bold mb-6">Rp ${ cartItem[i].harga }</h5>
+        </div>
+        
+        <!-- Tombol Qty -->
+        <div class="flex items-center gap-1">
+        <button onclick="removeItem('${ cartItem[i].id }')"
+        class="bg-gray-600 text-white px-2 rounded">-</button>
+        <span id="qty-${ cartItem[i].id }">${ cartItem[i].jumlah }</span>
+        <button onclick="addItem('${ cartItem[i].id }', ${ cartItem[i].harga })"
+        class="bg-yellow-600 text-white px-2 rounded">+</button>
+        </div>
+        </div>
+        </div>
+        `
+        totalHarga += cartItem[i].harga * cartItem[i].jumlah;     
+    }
+    updateTotalHarga();
+}
+
+updateCart();
+
+function updateTotalHarga() {
+    let hargaFinal = 0;
+    let teksTotalHarga = document.getElementById('hargaMakanan')
+    let teksHargaFinal = document.getElementById('totalHarga')
+
+    teksTotalHarga.textContent = "Rp " + totalHarga;
+    
+    if (isDianter) {
+        hargaFinal = 20_000 + totalHarga;
+    } else {
+        hargaFinal = totalHarga
+    }
+    
+    teksHargaFinal.textContent = "Rp " + hargaFinal;
+    
+}
+
+
 
 
