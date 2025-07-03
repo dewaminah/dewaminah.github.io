@@ -93,7 +93,7 @@ function removeItem(id) {
 
 const searchInput = document.getElementById("search");               // Referensi ke input search
 const dropdown = document.getElementById("searchDropdown");          // Referensi ke dropdown hasil pencarian
-const items = dropdown?.getElementsByTagName("li") || [];            // Ambil semua item <li> dalam dropdown (jika ada)
+const items = dropdown?.getElementsByTagName("a") || [];            // Ambil semua item <a> dalam dropdown (jika ada)
 
 if (searchInput && dropdown) {
     // Jalankan hanya jika input dan dropdown ada di DOM
