@@ -14,7 +14,7 @@
 <body>
     <nav class="z-100 flex justify-between py-5 shadow-md bg-white text-gray-500 fixed w-full">
         <!-- logo -->
-        <a href="./" class="flex justify-end items-center px-2 px-md-10 w-80">
+        <a href="./" class="flex justify-end items-center px-2 md:px-5 w-80">
             <img width="200" height="100" src="../assets/logo/logo_horizontal.png" alt="makantar">
         </a>
 
@@ -97,61 +97,38 @@
         </div>
     </div>
 
-    <footer class="px-5 py-10">
-        <div class="grid md:grid-cols-2">
-            <div class="p-5 grid md:grid-rows-3">
+    <footer class="p-5">
+        <div class="grid md:grid-cols-2 md:gap-20">
+            <div class="p-5 grid">
                 <div>
                     <img width="200" height="100" src="../assets/logo/logo_horizontal.png" alt="makantar">
                     <p class="px-2 py-4 text-justify">makantar adalah platform web sederhana untuk titip makanan ke temen kantor yang sedang keluar membeli makan siang. Konsepnya fun, santai, dan cocok untuk komunitas kerja yang sibuk tapi tetap ingin makan siang bareng — walau kadang males turun, males nyebrang, atau lagi ngejar deadline.</p>
                 </div>
-
-                <!-- grid kosong -->
-                <div class="md:block hidden"></div>
-
-                <div class="grid md:grid-cols-2">
-                    <!-- socmed? -->
-                    <div class="md:block hidden">
-
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-1 px-5 py-20 gap-10">
+                <!-- footer nav (home, about, testi, dll) -->
+                <div class="grid md:grid-cols-2 md:gap-0 gap-10">
+                    <div>
+                        <span>Contact Us</span>
+                        <div class="mt-4">
+                            <p>+62 812-345-678</p>
+                            <p>halo@makantar.id</p>
+                        </div>
                     </div>
-
-                    <div class="flex items-center px-2 py-4 hidden md:block">
-                        <div class="md:block flex gap-2">
-                            <p>© 2025 — Copyright</p>
-                            <p>All Rights reserved</p>
+                    <div>
+                        <span>Location</span>
+                        <div class="mt-4">
+                            <p>15345, Tangerang</p>
+                            <p>South Tower, GOP 1</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="grid md:grid-rows-3 grid-cols-2 md:grid-cols-1 px-md-10 py-5 px-6 gap-10">
-                <!-- footer nav (about, testi, dll) -->
-                <div class="md:block hidden">
-                    
-                </div>
+        </div>
 
-                <div>
-                    <span>Contact Us</span>
-                    <div class="mt-4">
-                        <p>+62 812-345-678</p>
-                        <p>halo@makantar.id</p>
-                    </div>
-                </div>
-                <div>
-                    <span>Location</span>
-                    <div class="mt-4">
-                        <p>15345, Tangerang</p>
-                        <p>South Tower, GOP 1</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex items-center px-2 py-4 md:hidden block justify-center">
-                <div class="md:block flex gap-2">
-                    <p>© 2025 — Copyright</p>
-                    <p>All Rights reserved</p>
-                </div>
-            </div>
-
+        <div class="flex items-center px-6 md:px-2 py-4 justify-center">
+            <p>© 2025 makantar — Copyright All Rights reserved</p>
         </div>
     </footer>
 
