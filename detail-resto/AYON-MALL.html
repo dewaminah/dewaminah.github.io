@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resto A</title>
+    <title>AYON MALL</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
     <style>
         body {
@@ -42,6 +45,7 @@
                 <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Udon Tempura</li>
                 <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Indomie Goreng Spesial</li>
                 <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Mie Tek-Tek</li>
+
                 <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Nasi Ayam Sambal Ijo</li>
                 <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Nasi Telur Dadar Crispy</li>
                 <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Nasi Goreng Kambing</li>
@@ -115,12 +119,12 @@
     <section class="max-w-6xl mx-auto px-4">
         <div class="flex flex-col md:flex-row gap-6 items-start">
             <!-- Gambar -->
-            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJlc3RhdXJhbnQlMjBmb29kfGVufDB8fDB8fHww"
+            <img src="https://blog.bankmega.com/wp-content/uploads/2022/11/Makanan-Khas-Tradisional.jpg"
                 class="w-3/5 md:w-1/4 rounded-lg object-cover shadow-md" alt="Foto Resto">
 
             <!-- Informasi Detail Resto -->
             <div class="flex-1 pl-6">
-                <h2 class="text-2xl font-bold mt-2 mb-6">Resto A</h2>
+                <h2 class="text-2xl font-bold mt-2 mb-6">AYON MALL</h2>
 
                 <!-- Lokasi -->
                 <div class="flex items-start gap-3 py-2">
@@ -181,17 +185,17 @@
                     <div class="flex justify-between items-center flex-1">
                         <!-- Deskripsi -->
                         <div>
-                            <h4 class="font-semibold text-lg">Mie Goreng Pedas</h4>
-                            <p class="text-sm text-gray-500">Mie goreng dengan sambal spesial.</p>
-                            <p class="mt-2 font-bold text-black">Rp 35000</p>
+                            <h4 class="font-semibold text-lg">Mie Kangkung</h4>
+                            <p class="text-sm text-gray-500">Mie Rebus dengan toping kangkung.</p>
+                            <p class="mt-2 font-bold text-black">Rp 15000</p>
                         </div>
 
                         <!-- Tombol Qty -->
                         <div class="flex items-center gap-1">
-                            <button onclick="removeItem('mie-goreng-pedas')"
+                            <button onclick="removeItem('mie-kangkung')"
                                 class="bg-gray-600 text-white px-2 rounded">-</button>
-                            <span id="qty-mie-goreng-pedas">0</span>
-                            <button onclick="addItem('mie-goreng-pedas', 35000)"
+                            <span id="qty-mie-kangkung">0</span>
+                            <button onclick="addItem('mie-kangkung', 15000)"
                                 class="bg-yellow-600 text-white px-2 rounded">+</button>
                         </div>
                     </div>
@@ -208,17 +212,17 @@
                     <div class="flex justify-between items-center flex-1">
                         <!-- Deskripsi -->
                         <div>
-                            <h4 class="font-semibold text-lg">Mie Ayam Cap Kungfu</h4>
-                            <p class="text-sm text-gray-500">Mie Ayam dengan chilli oil.</p>
-                            <p class="mt-2 font-bold text-black">Rp 30000</p>
+                            <h4 class="font-semibold text-lg">Mie Bakso Urat</h4>
+                            <p class="text-sm text-gray-500">Mie Ayam dengan tambahan bakso urat.</p>
+                            <p class="mt-2 font-bold text-black">Rp 20000</p>
                         </div>
 
                         <!-- Tombol Qty -->
                         <div class="flex items-center gap-1">
-                            <button onclick="removeItem('mie-ayam-kungfu')"
+                            <button onclick="removeItem('mie-bakso-urat')"
                                 class="bg-gray-600 text-white px-2 rounded">-</button>
-                            <span id="qty-mie-ayam-kungfu">0</span>
-                            <button onclick="addItem('mie-ayam-kungfu', 30000)"
+                            <span id="qty-mie-bakso-urat">0</span>
+                            <button onclick="addItem('mie-bakso-urat', 20000)"
                                 class="bg-yellow-600 text-white px-2 rounded">+</button>
                         </div>
                     </div>
@@ -246,17 +250,17 @@
                     <div class="flex justify-between items-center flex-1">
                         <!-- Deskripsi -->
                         <div>
-                            <h4 class="font-semibold text-lg">Nasi Ayam Geprek</h4>
-                            <p class="text-sm text-gray-500">Nasi hangat dan ayam yang digeprek dengan sambal.</p>
-                            <p class="mt-2 font-bold text-black">Rp 32000</p>
+                            <h4 class="font-semibold text-lg">Nasi Goreng Kambing</h4>
+                            <p class="text-sm text-gray-500">Nasi goreng dengan tambahan daging kambing lunak.</p>
+                            <p class="mt-2 font-bold text-black">Rp 33000</p>
                         </div>
 
                         <!-- Tombol Qty -->
                         <div class="flex items-center gap-1">
-                            <button onclick="removeItem('nasi-ayam-geprek')"
+                            <button onclick="removeItem('nasi-goreng-kambing')"
                                 class="bg-gray-600 text-white px-2 rounded">-</button>
-                            <span id="qty-nasi-ayam-geprek">0</span>
-                            <button onclick="addItem('nasi-ayam-geprek', 32000)"
+                            <span id="qty-nasi-goreng-kambing">0</span>
+                            <button onclick="addItem('nasi-goreng-kambing', 33000)"
                                 class="bg-yellow-600 text-white px-2 rounded">+</button>
                         </div>
                     </div>
@@ -272,17 +276,17 @@
                     <div class="flex justify-between items-center flex-1">
                         <!-- Deskripsi -->
                         <div>
-                            <h4 class="font-semibold text-lg">Nasi Goreng Spesial</h4>
-                            <p class="text-sm text-gray-500">Nasi goreng dengan rempah pilihan.</p>
-                            <p class="mt-2 font-bold text-black">Rp 33000</p>
+                            <h4 class="font-semibold text-lg">Nasi Rendang</h4>
+                            <p class="text-sm text-gray-500">Nasi hangat dengan lauk rendang khas padang.</p>
+                            <p class="mt-2 font-bold text-black">Rp 19000</p>
                         </div>
 
                         <!-- Tombol Qty -->
                         <div class="flex items-center gap-1">
-                            <button onclick="removeItem('nasi-goreng-spesial')"
+                            <button onclick="removeItem('nasi-rendang')"
                                 class="bg-gray-600 text-white px-2 rounded">-</button>
-                            <span id="qty-nasi-goreng-spesial">0</span>
-                            <button onclick="addItem('nasi-goreng-spesial', 33000)"
+                            <span id="qty-nasi-rendang">0</span>
+                            <button onclick="addItem('nasi-rendang', 19000)"
                                 class="bg-yellow-600 text-white px-2 rounded">+</button>
                         </div>
                     </div>

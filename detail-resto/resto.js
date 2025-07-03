@@ -46,6 +46,9 @@ function updateDisplay() {
             checkoutBtn.classList.add('opacity-50', 'cursor-not-allowed');
         }
     }
+    // Simpan total item dan total harga ke localStorage
+    localStorage.setItem('checkout_totalItem', totalItem);
+    localStorage.setItem('checkout_totalHarga', totalHarga);
 }
 
 function addItem(id, harga) {
